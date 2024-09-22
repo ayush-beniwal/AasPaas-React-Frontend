@@ -1,0 +1,40 @@
+.trending {
+    display: block;
+    background: #D2E3F2;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    max-width: 100%; /* Ensure it takes full width */
+    margin: 10px;
+    padding: 10px; /* Padding for space inside */
+}
+
+.head {
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    padding-bottom: 10px; /* Space between the header and products */
+    font-family: 'Poppins', sans-serif;
+    margin-left: 15px;
+}
+
+.productCover {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-start; /* Align items to the left */
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 20px; /* Space between products */
+}
+
+.productCover > div {
+    margin: 10px;
+}
+
+@media (max-width: 800px) {
+    .head {
+        text-align: center; /* Center the heading on small screens */
+        padding-left: 0;
+    }
+    .productCover {
+        justify-content: center; /* Center products on small screens */
+    }
+}

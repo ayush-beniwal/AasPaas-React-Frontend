@@ -1,0 +1,12 @@
+
+ .carousel{
+    margin-bottom: 20px;
+ }
+  @media (max-width: 1300px) {
+    .carousel img {
+      min-height: 30vh; /* Ensure images are 100% wide on mobile */
+    }
+  }
+  
+  
+  

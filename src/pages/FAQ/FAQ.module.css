@@ -1,0 +1,120 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Container */
+.container1 {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: #f7faff;
+}
+
+/* FAQ Box */
+.faq {
+    max-width: 1200px;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 0 20px;
+    transition: all 0.3s ease;
+}
+
+/* FAQ Title */
+.title {
+    font-family: 'Alata', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Accordion Container */
+.boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Accordion Items */
+.accordion_item {
+    background: #f9f9fb;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.accordion_header button {
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    color: #333;
+    font-size: 24px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.accordion_header button:hover {
+    background-color: #f0f0f5;
+}
+
+
+.accordion_button[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+.accordion_body {
+    padding: 20px;
+    font-size: 18px;
+    background-color: #f7faff;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq {
+        width: 90%;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .accordion_header button {
+        font-size: 20px;
+    }
+
+    .accordion_body {
+        font-size: 16px;
+    }
+}

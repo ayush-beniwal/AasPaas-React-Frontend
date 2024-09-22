@@ -1,0 +1,47 @@
+.trending {
+    display: inline-block;
+    background: #D2E3F2;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    max-width: max-content;
+    margin: 10px;
+    padding: 10px; /* Added padding for better spacing */
+}
+
+.head {
+    text-align: left; /* Default alignment */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    padding: 0 0 10px 20px; /* Added bottom padding for space below the header */
+    font-family: 'Poppins', sans-serif;
+    margin-left: 15px;
+}
+
+/* Media query for centering the heading below 800px */
+
+
+.productCover {
+    width: 100%;
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    margin-left: 10px; /* Adjust margin to align items */
+}
+
+.productCover > div {
+    margin: 10px; /* Space between products */
+}
+
+@media (max-width: 800px) {
+    .head {
+        text-align: center; /* Center the heading */
+        padding-left: 0; /* Remove left padding for centering */
+    }
+    .productCover {
+        display: flex; /* Use flexbox for horizontal layout */
+        justify-content: center;
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        margin-left: 5px; /* Adjust margin to align items */
+    }
+}

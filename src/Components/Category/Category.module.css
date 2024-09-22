@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@600&display=swap');
+
+.container {
+    max-width: max-content;
+    height: 50px;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    background: #E5F3FB;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 17px 17px 5px 5px;
+    display: grid;
+    grid-template-columns: repeat(7, 125px);
+    column-gap: 60px;
+}
+
+.img2 {
+    margin-top: -80px;
+    width: 90px;
+}
+
+.text {
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.categories a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.cover {
+    text-align: center;
+}
+
+
+@media (max-width: 1250px) {
+
+    .container {
+        max-width: max-content;
+        height: 50px;
+        margin-top: 90px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        background: #E5F3FB;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 17px 17px 5px 5px;
+        display: grid;
+        grid-template-columns: repeat(6, 125px);
+        column-gap: 60px;
+    }
+    
+}
+
+
+@media (max-width: 1050px) {
+
+    .container {
+        max-width: max-content;
+        background:  #E5F3FB;
+        height: auto;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 17px 17px 5px 5px;
+        display: grid;
+        grid-template-columns: repeat(2, 125px);
+        grid-auto-flow: row;
+        column-gap: 60px;
+        row-gap: 30px; /* Add space between the rows */
+        padding: 20px;
+    }
+    .cover:nth-child(-n+3) {
+        margin-bottom: 0px;
+    }
+    .cover:nth-child(-n+3) {
+        margin-bottom: 40px;
+    }
+    
+}
+

@@ -1,0 +1,76 @@
+a {
+    text-decoration: none;
+}
+
+.bg {
+    background: url('https://res.cloudinary.com/aaspaas/image/upload/v1666902722/Backgrounds/loginPage_isas0x.png') no-repeat center/cover;
+    background-size: 1550px 720px;
+    margin: 0px;
+    padding-top: 713px;
+}
+
+.login_image img {
+    width: 480px;
+}
+
+.login_image {
+    position: absolute;
+    right: 8%;
+    top: 6%;
+}
+
+.google_login {
+    background-color: #F9F9F9;
+    position: absolute;
+    right: 6.2%;
+    top: 60%;
+    border-radius: 30px;
+    padding: 20px 30px;
+    box-shadow: 6px 6px rgba(0, 0, 0, 0.25);
+    min-width: 480px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.google_login button {
+    background-color: #1E90FF;
+    font-size: 24px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    height: 58px;
+    cursor: pointer;
+    border: none;
+    width: 360px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+}
+
+.google_login button:hover {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.google_login img {
+    width: 69px;
+    background-color: white;
+    position: relative;
+    right: 37px;
+}
+
+.google_login p {
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.google_login a {
+    color: #181EB1;
+    text-decoration: none;
+}

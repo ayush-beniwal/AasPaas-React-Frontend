@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.search {
+  flex-grow: 1;
+  max-width: 750px;
+  margin: 0px 30px;
+}
+
+.search form {
+  display: flex;
+  position: relative;
+}
+
+.search input {
+  width: 100%;
+  height: 45px;
+  border-radius: 22.5px;
+  border: 1px solid #ddd;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+.search button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #3a3a3a;
+  border: none;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search button img {
+  width: 18px;
+  height: 18px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.categories {
+  display: flex;
+  margin: 0px 0px;
+}
+
+.categories a {
+  margin-right: 20px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signin {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.signin img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.profileImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.menuToggle {
+  display: none; /* Hidden by default */
+}
+
+@media (max-width: 499px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .search {
+    order: 3;
+    margin-top: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .menuToggle {
+    align-items: end;
+    display: block; /* Show on mobile */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .menu {
+    display: none; /* Hide menu by default */
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+  }
+
+  .menuOpen {
+    display: flex; /* Show when open */
+  }
+
+  .categories {
+    align-items: end;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .categories a {
+    align-items: end;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .signin {
+    margin: auto;
+    align-items: end;
+    margin-top: 10px;
+    margin-right: 0;
+  }
+}
+
+
+
+@media (min-width: 801px) {
+  .menuToggle {
+    display: none; /* Hidden on larger screens */
+  }
+
+  .menu {
+    display: flex; /* Always show */
+  }
+}
+@media (min-width: 450px) and (max-width: 800px) {
+    .search {
+      display: none; /* Hide the search bar */
+    }
+  }
+  
