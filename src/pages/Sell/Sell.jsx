@@ -1,4 +1,5 @@
 import styles from "./Sell.module.css";
+import { Link } from "react-router-dom";
 
 function Sell() {
   return (
@@ -6,36 +7,38 @@ function Sell() {
       <div className={styles.box}>
         <div className={styles.heading}>Sell and Manage Products</div>
         <div className={styles.sections}>
-          <a href="/products/selectCategory">
+          <Link to="/products/selectCategory">
             <div className={styles.account}>
               <div>
                 <img
                   src="https://res.cloudinary.com/sairev/image/upload/v1661367654/AasPaas/Files/Profile%20Images/sell_option_bfagmg.png"
+                  alt="Sell a new product"
                   className={styles.sellimg}
                 />
               </div>
               <div className={styles.text}>
-                <li className={styles.head}>Sell a new product</li>
-                <li className={styles.sub}>Add a new product for listing</li>
+                <p className={styles.head}>Sell a new product</p>
+                <p className={styles.sub}>Add a new product for listing</p>
               </div>
             </div>
-          </a>
-          <a href="/users/listedProducts">
+          </Link>
+          <Link to="/users/listedProducts">
             <div className={styles.account}>
               <div>
                 <img
                   src="https://res.cloudinary.com/aaspaas/image/upload/v1666902404/SellPage/manage_product_naqlf5.png"
+                  alt="Manage listed products"
                   className={styles.deleteimg}
                 />
               </div>
               <div className={styles.text}>
-                <li className={styles.head}>Manage your listed products</li>
-                <li className={styles.sub}>
+                <p className={styles.head}>Manage your listed products</p>
+                <p className={styles.sub}>
                   Manage and edit info regarding previously listed products
-                </li>
+                </p>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

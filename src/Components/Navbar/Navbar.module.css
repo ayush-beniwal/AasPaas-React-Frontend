@@ -170,3 +170,38 @@
     }
   }
   
+  /* Button Styles for Navigation Links */
+.navButton {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  font-size: inherit;
+  margin-right: 20px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  padding: 0; /* Removes button padding */
+}
+
+/* Hover effect to match links */
+.navButton:hover {
+  color: #555; /* Slightly darker color on hover */
+}
+
+/* Make sure alignment matches */
+.categories .navButton, .categories a {
+  margin-right: 20px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 499px) {
+  .categories .navButton {
+    margin-bottom: 10px;
+    align-self: start;
+  }
+}

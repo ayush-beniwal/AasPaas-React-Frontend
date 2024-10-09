@@ -5,6 +5,7 @@ import Register from "./pages/Register/Register";
 import EachProduct from "./pages/EachProduct/EachProduct";
 import SearchPage from "./pages/SearchPage/SearchPage";
 import FAQ from "./pages/FAQ/FAQ";
+import Sell from "./pages/Sell/Sell";
 import { useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { useDispatch, useSelector } from "react-redux";
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
       <Route path="register" element={<Register />} />
       <Route path="products" element={<EachProduct />} />
       <Route path="search" element={<SearchPage/>} /> 
+      <Route path="sell" element={<Sell />} />
       <Route path="*" element={<Error404 />} />
       <Route path="FAQ" element={<FAQ/>}/>
     </Route>

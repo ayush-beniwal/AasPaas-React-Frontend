@@ -1,0 +1,27 @@
+/* src/components/Toast.module.css */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text color */
+    border-radius: 8px;
+    font-size: 16px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-left: 10px solid #D2E3F2; /* Accent border with your palette color */
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
