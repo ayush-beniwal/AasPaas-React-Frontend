@@ -6,10 +6,8 @@ import Slider from "../Components/Slider/Slider";
 import FooterL from "../Components/FooterL/FooterL";
 import styles from "./Home.module.css";
 
-
 function Home() {
   const [count, setCount] = useState(3); // Default count for Recently Added/Trending
-  const [otherDealsCount, setOtherDealsCount] = useState(0); // Count for Other Deals
   const [imagesInView, setImagesInView] = useState(false); // For card animations
   const [products, setProducts] = useState([]); // Store fetched products
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -28,13 +26,8 @@ function Home() {
     fetchProducts();
 
     const handleResize = () => {
-      const width = window.innerWidth;
-      setWindowWidth(width);
-      if (width < 1200) {
-        setCount(4); // Change count to 4 below 1200px
-      } else {
-        setCount(3); // Change count back to 3 above 1200px
-      }
+      setWindowWidth(window.innerWidth);
+      setCount(window.innerWidth < 1200 ? 4 : 3); // Adjust Recently Added/Trending count based on width
     };
 
     // Set initial count and width on mount
@@ -71,12 +64,14 @@ function Home() {
     };
   }, []);
 
+  // Determine the number of services to show based on window width
   const getServiceCount = (width) => {
-    if (width <= 450) return 1;
-    if (width <= 650) return 2;
+    if (width <= 450) return 2;
+    if (width <= 700) return 2;
     return 3;
   };
 
+  // Services content
   const services = [
     {
       img: "https://im.indiatimes.in/content/2015/May/bangalore_1431434983.jpg?w=640&h=427&cc=1&webp=1&q=75",
@@ -98,8 +93,11 @@ function Home() {
     },
   ];
 
-  
-  
+  // Filter services based on window width
+  const filteredServices = services.slice(0, getServiceCount(windowWidth)).filter((service, index) => {
+    if (windowWidth <= 450 && index === 0) return false;
+    return true;
+  });
 
   return (
     <>
@@ -115,24 +113,16 @@ function Home() {
         <div className={styles.cardGroups}>
           <div className={styles.cardGroup}>
             <div
-              className={`${styles.bigCard} ${styles.card} ${
-                imagesInView ? styles.animateCard1 : ""
-              }`}
+              className={`${styles.bigCard} ${styles.card} ${imagesInView ? styles.animateCard1 : ""}`}
             ></div>
             <div
-              className={`${styles.bigCard} ${styles.card} ${
-                imagesInView ? styles.animateCard2 : ""
-              }`}
+              className={`${styles.bigCard} ${styles.card} ${imagesInView ? styles.animateCard2 : ""}`}
             ></div>
             <div
-              className={`${styles.bigCard} ${styles.card} ${
-                imagesInView ? styles.animateCard3 : ""
-              }`}
+              className={`${styles.bigCard} ${styles.card} ${imagesInView ? styles.animateCard3 : ""}`}
             ></div>
             <div
-              className={`${styles.bigCard} ${styles.card} ${
-                imagesInView ? styles.animateCard4 : ""
-              }`}
+              className={`${styles.bigCard} ${styles.card} ${imagesInView ? styles.animateCard4 : ""}`}
             ></div>
           </div>
         </div>
@@ -147,7 +137,7 @@ function Home() {
       
       <div className={styles.featuredServices}>
         <div className={styles.servicesList}>
-          {services.slice(0, getServiceCount(windowWidth)).map((service, index) => (
+          {filteredServices.map((service, index) => (
             <div key={index} className={styles.service}>
               <img src={service.img} alt={service.alt} />
               <h4>{service.title}</h4>
