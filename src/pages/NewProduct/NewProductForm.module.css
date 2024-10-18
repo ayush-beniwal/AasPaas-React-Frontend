@@ -1,72 +1,147 @@
-/* NewProductForm.module.css */
 .formContainer {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-  }
-  
-  h2 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
+  width: 80%;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* The form itself */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grid layout for screens wider than 1000px */
+@media (min-width: 1000px) {
   .form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
   }
-  
-  .formGroup {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .formGroup label {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 5px;
-  }
-  
-  .formGroup input[type="text"],
-  .formGroup input[type="number"],
-  .formGroup input[type="file"],
+
+  /* Make the textarea span both columns */
   .formGroup textarea {
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 4px;
-    border: 1px solid #D2E3F2;
-    outline: none;
-    transition: border-color 0.3s ease;
+    grid-column: span 2;
   }
-  
-  .formGroup textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
-  
-  .formGroup input:focus,
-  .formGroup textarea:focus {
-    border-color: #333;
-  }
-  
+
+  /* Submit button also spans two columns */
   .submitButton {
-    padding: 12px 20px;
-    font-size: 1.1rem;
-    color: #fff;
-    background-color: #333;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    grid-column: span 2;
+    justify-self: center;
   }
+}
+
+.formGroup {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="number"],
+.formGroup input[type="file"],
+.formGroup textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #d2e3f2;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: #333;
+}
+
+.submitButton {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #555;
+}
+/* Hide the default file input */
+.fileInput {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+/* Custom button for triggering the file input */
+.formGroup .customFileButton {
+  display: flex;
+
+  padding: 7px 10%;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #4b91ce;
   
-  .submitButton:hover {
-    background-color: #555;
-  }
-  
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+/* Change background on hover */
+.customFileButton:hover {
+  background-color: #555;
+}
+
+/* Style for the 'No file chosen' text */
+.fileChosenText {
+  font-size: 1rem;
+  color: #555;
+  margin-left: 10px;
+}
+.errorMessage {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+.clearButton {
+  padding: 8px 16px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #d9534f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.clearButton:hover {
+  background-color: #c9302c;
+}
