@@ -82,7 +82,7 @@ function FooterL() {
                   <a href="/users/orders">Orders</a>
                 </li>
                 <li>
-                  <a href="/users/sell">Sell</a>
+                  <a href="/sell">Sell</a>
                 </li>
               </ul>
             </div>
@@ -95,7 +95,7 @@ function FooterL() {
                   <a href="">About Us</a>
                 </li>
                 <li>
-                  <a href="/users/contact">Contact Us</a>
+                  <a href="/faq">Contact Us</a>
                 </li>
               </ul>
             </div>

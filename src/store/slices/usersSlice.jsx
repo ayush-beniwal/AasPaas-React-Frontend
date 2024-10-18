@@ -19,7 +19,7 @@ const userSlice = createSlice({
       state.email = action.payload.email;
       state.photo = action.payload.photo;
     },
-    logoutSuccess: (state, action) => {
+    logoutSuccess: (state) => {
       state.isLoggedIn = false;
       state.token = null;
       state.id = null;

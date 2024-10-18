@@ -7,6 +7,7 @@ import SearchPage from "./pages/SearchPage/SearchPage";
 import FAQ from "./pages/FAQ/FAQ";
 import Sell from "./pages/Sell/Sell";
 import NewProductForm from "./pages/NewProduct/NewProductForm";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import { useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { useDispatch, useSelector } from "react-redux";
@@ -30,6 +31,8 @@ const router = createBrowserRouter(
       <Route path="/sell/new-product" element={<NewProductForm />} />
       <Route path="*" element={<Error404 />} />
       <Route path="FAQ" element={<FAQ/>}/>
+      <Route path="profile" element={<ProfilePage/>}/>
+
     </Route>
   )
 );
